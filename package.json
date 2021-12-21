@@ -1,0 +1,22 @@
+{
+  "name": "react-shop",
+  "version": "1.0.0",
+  "description": "Ecommerce created with React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannzdev/react-shop.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Daniel Sanchez <danielsanchez102@gmail.com@>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dannzdev/react-shop/issues"
+  },
+  "homepage": "https://github.com/dannzdev/react-shop#readme"
+}
