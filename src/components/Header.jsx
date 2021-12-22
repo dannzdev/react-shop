@@ -40,10 +40,10 @@ const Header = () => {
 			</div>
 			<div className="navbar-right">
 				<ul>
-					<li className="navbar-email" onClick={handleToggle}>
+					<li className="navbar-email">
 						platzi@example.com
 					</li>
-					<li className="navbar-shopping-cart">
+					<li className="navbar-shopping-cart" onClick={handleToggle}>
 						<img src={shoppingCart} alt="shopping cart" />
 						<div>2</div>
 					</li>
