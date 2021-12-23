@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Ecommerce created with React.js",
   "main": "src/index.js",
-  "homepage": "https://dannzdev.github.io/react-shop",
+  "homepage": "https://dannzdev.github.io/react-shop/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
@@ -16,7 +16,8 @@
     "url": "git+https://github.com/dannzdev/react-shop.git"
   },
   "keywords": [
-    "react"
+    "react",
+    "javascript"
   ],
   "author": "Daniel Sanchez <danielsanchez102@gmail.com@>",
   "license": "MIT",
