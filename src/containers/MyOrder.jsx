@@ -1,11 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../context/AppContext';
 import OrderItem from '@components/OrderItem';
 import '@styles/MyOrder.scss';
 import arrow from '@icons/flechita.svg';
 
-const MyOrder = () => {
+const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 	const { state } = useContext(AppContext);
+	const [ toggle, setToggle ] = useState(false);
+
 
 	const sumTotal = () => {
 		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
@@ -18,12 +20,14 @@ const MyOrder = () => {
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={arrow} alt="arrow" />
-				<p className="title">My order</p>
+
+				<a href="/orders"><img src={arrow} alt="arrow"/></a>
+				<p className="titlep">My order</p>
+
 			</div>
 			<div className="my-order-content">
-				{state.cart.map(product => (
-			<OrderItem product={product} key={`orderItem-${product.id}`}/>
+			{state.cart.map((product, index) => (
+					<OrderItem product={product} key={`orderItem-${product.id}-${index}`} />
 		))}
 
 				<div className="order">
@@ -32,10 +36,11 @@ const MyOrder = () => {
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
+				<a href="/checkout"><button className="primary-button" onClick={() => setToggle(true)}>
+					Checkout</button></a>
 			</div>
+			{toggle && <Checkout toggleOrders={toggleOrders}
+					setToggleOrders={setToggleOrders}/>}
 		</aside>
 	);
 }

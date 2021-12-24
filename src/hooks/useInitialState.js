@@ -7,32 +7,14 @@ const initialState = {
 const useInitialState = () => {
 	const [state, setState] = useState(initialState);
 
-    const verifyIdDoesNotExist = (id) => {
-        const idExist = state.cart.some(item => item.id === id)
-
-        if(idExist) {
-          console.log('true')
-          return verifyIdDoesNotExist(id + 1);
-        } else {
-          console.log('false')
-          return id;
-        }
-      }
-
-     const addToCart = (payload) =>  {
-        const newId = verifyIdDoesNotExist(payload.id)
-        const payloadWithNewId = {
-          ...payload,
-          id: newId,
-        }
-
-        console.log(payloadWithNewId)
-        setState({
-          ...state,
-          cart: [...state.cart, payloadWithNewId]
-        })
-      }
-
+  const addToCart = (payload) => {
+    setState({
+      ...state,
+      cart: state.cart.includes(payload)
+        ? state.cart
+        : [...state.cart, payload],
+    });
+  };
 
 	const removeFromCart = (payload) => {
 		setState({
