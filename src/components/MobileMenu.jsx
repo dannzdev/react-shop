@@ -36,7 +36,7 @@ const MobileMenu = () => {
 
                 <ul>
                 <li>
-                    <a href="/account" className="email">matiaschiodo@gmail.com</a>
+                    <a href="/account" className="email">danielsanchez1502@gmail.com</a>
                 </li>
                 <li>
                     <a href="/signup" className="sign-out">Sign out</a>
