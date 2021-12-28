@@ -5,7 +5,11 @@ import arrow from '@icons/flechita.svg';
 import AppContext from '../context/AppContext';
 
 const Checkout = ({ setToggle }) => {
+
 	const { state } = useContext(AppContext);
+	
+	console.log(state);
+
 	const today = new Date(Date.now()).toLocaleString().split(', ')[0];
 	return (
 		<div className="Checkout">
